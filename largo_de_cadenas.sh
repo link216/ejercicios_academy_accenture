@@ -6,17 +6,8 @@ function longstring (){
 while IFS= read -r line || [[ -n $line ]]; do
 
 #
-# Counting words
-#word=$(echo -n "$line" | wc -w)
 # Counting characters
 char=$(echo -n "$line" | wc -c)
-
-# Counting Number of white spaces (Here,specificly " ")
-# sed "s/ change this to whitespace//g"
-#space=$(expr length "$line" - length `echo "$line" | sed "s/ //g"`)
-
-# Counting special characters
-#special=$(expr length "${line//[^\~!@#$&*()]/}")
 
 # Output
 echo "$char this string: $line is the largest"
